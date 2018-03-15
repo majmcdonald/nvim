@@ -58,6 +58,8 @@ Plugin 'xolox/vim-misc'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'scrooloose/nerdtree'
+Plugin 'fenetikm/falcon'
+Plugin 'jacoborus/tender.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -86,11 +88,11 @@ nmap <silent> <F4> :TagbarToggle<CR>
 " let g:airline#extensions#tabline#enabled = 1
 
 " ale
-let g:ale_sign_column_always = 1
-
+"let g:ale_sign_column_always = 1
+let g:ale_lint_on_text_changed = 'never'      "only run when saving
 
 " colorscheme
-colorscheme adam
+colorscheme tender
 
 ".jsbeautify
 map <c-f> :call JsBeautify()<cr>
