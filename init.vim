@@ -7,7 +7,7 @@
     set wildmode=list:longest " turn on wild mode huge list
     set tags=tags; "single tags file for a source tree
     set backupdir=~/.vim/backup " where to put backup files
-    set directory=~/.vim/temp " directory to place swap files in
+    set directory=~/.vim/tmp " directory to place swap files in
 
 " UI
     set ignorecase " case insensitive search
@@ -35,10 +35,10 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.config/nvim/bundle/Vundle.vim
 
 " alternatively, pass a path where Vundle should install plugins
-call vundle#begin('~/.config/nvim/plugins')
+call vundle#begin('~/.config/nvim/bundle')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -49,17 +49,18 @@ Plugin 'elzr/vim-json'
 Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'xolox/vim-colorscheme-switcher'
-Plugin 'roxma/nvim-completion-manager'
+Plugin 'ncm2/ncm2'
+Plugin 'roxma/nvim-yarp'
 Plugin 'w0rp/ale'
 Plugin 'majutsushi/tagbar'
-Plugin '2072/PHP-Indenting-for-VIm'
-Plugin 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
 Plugin 'xolox/vim-misc'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fenetikm/falcon'
 Plugin 'jacoborus/tender.vim'
+Plugin 'vimwiki/vimwiki'
+Plugin 'elixir-editors/vim-elixir'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
